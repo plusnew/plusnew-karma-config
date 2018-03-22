@@ -1,6 +1,6 @@
 {
   "name": "plusnew-karma-config",
-  "version": "0.5.66",
+  "version": "0.5.67",
   "description": "",
   "main": "configs/karma.conf.js",
   "scripts": {
@@ -16,4 +16,12 @@
     "url": "https://github.com/plusnew/plusnew-karma-config/issues"
   },
   "homepage": "https://github.com/plusnew/plusnew-karma-config#readme"
+
+  "devDependencies": {
+    "karma": "1.7.1",
+    "karma-chrome-launcher": "2.2.0",
+    "karma-jasmine": "1.1.1",
+    "karma-remap-istanbul": "0.6.0",
+    "karma-sourcemap-loader": "0.3.7"
+  }
 }
