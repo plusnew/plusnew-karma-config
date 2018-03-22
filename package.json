@@ -15,8 +15,7 @@
   "bugs": {
     "url": "https://github.com/plusnew/plusnew-karma-config/issues"
   },
-  "homepage": "https://github.com/plusnew/plusnew-karma-config#readme"
-
+  "homepage": "https://github.com/plusnew/plusnew-karma-config#readme",
   "devDependencies": {
     "karma": "1.7.1",
     "karma-chrome-launcher": "2.2.0",
