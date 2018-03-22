@@ -1,0 +1,19 @@
+{
+  "name": "plusnew-karma-config",
+  "version": "0.5.66",
+  "description": "",
+  "main": "configs/karma.conf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plusnew/plusnew-karma-config.git"
+  },
+  "author": "Carlo Jeske",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/plusnew/plusnew-karma-config/issues"
+  },
+  "homepage": "https://github.com/plusnew/plusnew-karma-config#readme"
+}
