@@ -1,11 +1,13 @@
 /* globals module */
 
-module.exports = distDirectory => 
+module.exports = (distDirectory) => 
   config => {
     config.set({
       // base path that will be used to resolve all patterns (eg. files, exclude)
       basePath: distDirectory,
 
+      // sets the config for compiling webpack
+      webpack,
       // frameworks to use
       // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
       frameworks: ['jasmine'],
@@ -19,7 +21,7 @@ module.exports = distDirectory =>
       // preprocess matching files before serving them to the browser
       // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
       preprocessors: {
-        'index.test.js': ['sourcemap'],
+        'index.test.js': ['webpack', 'sourcemap'],
       },
 
       // test results reporter to use
@@ -52,7 +54,8 @@ module.exports = distDirectory =>
         'karma-jasmine',
         'karma-sourcemap-loader',
         'karma-chrome-launcher',
-        'karma-remap-istanbul'
+        'karma-remap-istanbul',
+        'karma-webpack',
       ],
 
       // Concurrency level

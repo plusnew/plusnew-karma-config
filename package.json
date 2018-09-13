@@ -1,6 +1,6 @@
 {
   "name": "plusnew-karma-config",
-  "version": "0.5.69",
+  "version": "0.6.13",
   "description": "",
   "main": "configs/karma.conf.js",
   "scripts": {
@@ -23,6 +23,7 @@
     "karma-chrome-launcher": "2.2.0",
     "karma-jasmine": "1.1.1",
     "karma-remap-istanbul": "0.6.0",
-    "karma-sourcemap-loader": "0.3.7"
+    "karma-sourcemap-loader": "0.3.7",
+    "karma-webpack": "^3.0.4"
   }
 }
