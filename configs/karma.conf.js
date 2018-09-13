@@ -1,10 +1,16 @@
 /* globals module */
+const path = require('path');
 
-module.exports = (distDirectory) => 
+module.exports = (projectDirectory, webpackConfig) =>
   config => {
+    const webpack = {
+      ...webpackConfig,
+      output: undefined
+    };
+
     config.set({
       // base path that will be used to resolve all patterns (eg. files, exclude)
-      basePath: distDirectory,
+      basePath: path.join(projectDirectory, 'test'),
 
       // sets the config for compiling webpack
       webpack,
@@ -13,7 +19,10 @@ module.exports = (distDirectory) =>
       frameworks: ['jasmine'],
 
       // list of files / patterns to load in the browser
-      files: ['index.test.js'],
+      files: [
+        '**/*.spec.ts',
+        '**/*.spec.tsx',
+      ],
 
       // list of files to exclude
       exclude: [],
@@ -21,7 +30,8 @@ module.exports = (distDirectory) =>
       // preprocess matching files before serving them to the browser
       // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
       preprocessors: {
-        'index.test.js': ['webpack', 'sourcemap'],
+        '**/*.spec.ts': ['webpack', 'sourcemap'],
+        '**/*.spec.tsx': ['webpack', 'sourcemap'],
       },
 
       // test results reporter to use
@@ -66,8 +76,8 @@ module.exports = (distDirectory) =>
         remapOptions: {}, //additional remap options
         reportOptions: {}, //additional report options
         reports: {
-          lcovonly: 'test/coverage/lcov.info',
-          html: 'test/coverage/report',
+          lcovonly: 'coverage/lcov.info',
+          html: 'coverage/report',
           text: ''
         }
       }
