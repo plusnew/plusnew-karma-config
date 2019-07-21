@@ -1,6 +1,6 @@
 {
   "name": "plusnew-karma-config",
-  "version": "0.6.49",
+  "version": "0.6.50",
   "description": "",
   "main": "configs/karma.conf.js",
   "scripts": {
@@ -21,9 +21,10 @@
     "jasmine-core": "^3.4.0",
     "karma": "4.2.0",
     "karma-chrome-launcher": "3.0.0",
+    "karma-coverage-istanbul-reporter": "^2.0.6",
     "karma-jasmine": "2.0.1",
-    "karma-remap-istanbul": "0.6.0",
     "karma-sourcemap-loader": "0.3.7",
     "karma-webpack": "^4.0.2"
-  }
+  },
+  "devDependencies": {}
 }

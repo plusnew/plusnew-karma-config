@@ -37,7 +37,12 @@ module.exports = (projectDirectory, webpackConfig) =>
       // test results reporter to use
       // possible values: 'dots', 'progress'
       // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-      reporters: ['progress', 'karma-remap-istanbul'],
+      reporters: ['progress', 'coverage-istanbul'],
+
+      coverageIstanbulReporter: {
+        reports: ['html', 'lcov', 'text-summary'],
+        dir: 'coverage/report',
+      },
 
       // web server port
       port: 9876,
@@ -61,25 +66,15 @@ module.exports = (projectDirectory, webpackConfig) =>
       singleRun: false,
 
       plugins: [
+        'karma-webpack',
         'karma-jasmine',
         'karma-sourcemap-loader',
+        'karma-coverage-istanbul-reporter',
         'karma-chrome-launcher',
-        'karma-remap-istanbul',
-        'karma-webpack',
       ],
 
       // Concurrency level
       // how many browser should be started simultaneous
       concurrency: Infinity,
-
-      remapIstanbulReporter: {
-        remapOptions: {}, //additional remap options
-        reportOptions: {}, //additional report options
-        reports: {
-          lcovonly: 'coverage/lcov.info',
-          html: 'coverage/report',
-          text: ''
-        }
-      }
     });
 };
