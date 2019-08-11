@@ -41,7 +41,7 @@ module.exports = (projectDirectory, webpackConfig) =>
 
       coverageIstanbulReporter: {
         reports: ['html', 'lcov', 'text-summary'],
-        dir: 'coverage/report',
+        dir: 'coverage',
       },
 
       // web server port
