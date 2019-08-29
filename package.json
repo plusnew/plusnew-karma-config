@@ -1,6 +1,6 @@
 {
   "name": "plusnew-karma-config",
-  "version": "0.6.54",
+  "version": "0.6.61",
   "description": "",
   "main": "configs/karma.conf.js",
   "scripts": {
